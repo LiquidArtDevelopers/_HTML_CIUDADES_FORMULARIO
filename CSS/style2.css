@@ -71,8 +71,42 @@ textarea{
 } /* estilo condicional responsive si la pantalla es menor de 480 px, el form tendrá el 100% de tamaño
 en vez de 450px */
 
-
-
+#cuerpo_gracias{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 50px;
+    align-items: center;
+    background-image: url("../imags-web/mundo2.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+#gracias{
+    font-size: 90px!important;
+    color: black!important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif!important;
+}
+#cuerpo_texto_gracias{
+    width: 80%;
+    padding: 30px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#cuerpo_gracias p{
+    font-size: 25px;
+    color: black;
+}
+#volver{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
 
 .contenedor{
     background-color: #ffffff;
