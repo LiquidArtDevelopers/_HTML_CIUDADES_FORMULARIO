@@ -42,10 +42,10 @@
         <div class="formulario">
             <form action="enviar.php" method="post" > <!-- configuramos para enviar a través de php -->
                 <h2>Contacta con nosotros</h2>
-                <input type="text" name="Nombre" placeholder="Nombre" required>
-                <input type="text" name="Correo" placeholder="Correo" required>
-                <input type="text" name="Teléfono" placeholder="Teléfono" required>
-                <textarea name="Mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
+                <input type="text" name="Nombre" minlength="4" maxlength="40"  placeholder="Nombre (mínimo 4 carácteres)" required>
+                <input type="email" name="Correo" placeholder="Correo" required>
+                <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" name="Teléfono" placeholder="Teléfono" required>
+                <textarea name="Mensaje" maxlength="500" placeholder="Escriba aquí su mensaje" required></textarea>
                 <input type="submit" value="ENVIAR" id="boton">
             </form>
         </div>

@@ -174,10 +174,24 @@ nav{
     border: 3px solid rgb(255, 255, 255);
     
     transition: 800ms;
+    -o-transition: 800ms;
+    -moz-transition: 800ms;
+    -ms-transition: 800ms;
+    -webkit-transition: 800ms;
 }
 .ciudades img:hover{
-    border: 3px solid #8a9fd5;
-    -webkit-transform:scale(1.3);transform:scale(1.3);
+    border: 3px solid #8a9fd5;    
+    transform:scale(1.3);
+    -webkit-transform:scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    
+    transition: 800ms;
+    -o-transition: 800ms;
+    -moz-transition: 800ms;
+    -ms-transition: 800ms;
+    -webkit-transition: 800ms;
 }
 
 .ciudades a{   
