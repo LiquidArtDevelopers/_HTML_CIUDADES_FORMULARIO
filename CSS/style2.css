@@ -4,6 +4,28 @@
   outline: 0;
   box-sizing: border-box;
 }
+.contenedor{
+    background-color: #ffffff;
+    margin: 0 auto; /* centra todo lo que tenga el DIV en el medio */
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+.chec, .contenedor_spam{
+    display: none;
+}
+header{    
+    background-color: #ffffff;    
+    padding: 15px;
+    
+}
+/* estilos del nav */
+
+
+/* fin estilos del nav */
+
+
+
 
 
 .formulario{  
@@ -23,7 +45,13 @@ form{
     margin-top: 20px;
     border-radius: 7px;
 }
-
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100vw;
+}
 
 h2{
     color: rgba(255, 255, 255, 1);
@@ -108,18 +136,7 @@ en vez de 450px */
     color: black;
 }
 
-.contenedor{
-    background-color: #ffffff;
-    margin: 0 auto; /* centra todo lo que tenga el DIV en el medio */
-    width: 1000px;
-    height: 100%;
-}
 
-header{    
-    background-color: #ffffff;    
-    padding: 15px;
-    
-}
 
 h1{
     color: #0f296f;
@@ -246,3 +263,53 @@ nav{
 }
 
 
+
+
+@media screen and (max-width:540px) {
+    h1{
+        font-size: 25px;
+        transform: translateX(-30px);
+    }
+    .chec {
+        position: absolute;
+        top:3px;
+        right: 3px;
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        display: initial;
+    }
+    .contenedor_spam {
+        position: relative;
+        top:3px;
+        right: 3px;
+        z-index: 900;
+        width: 50px;
+        height: 50px;position: absolute;        
+        pointer-events:none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        
+    }
+    .contenedor_spam span {
+        width: 100%;
+        height: 3px;
+        background: black;
+        transition: all 250ms ease-out;
+        transform-origin: 0 0;
+    }
+    .chec:checked ~ .contenedor_spam span:nth-last-child(1) {
+        transform: rotate(-45deg) translate(-1px, 0px);
+    }
+    .chec:checked ~ .contenedor_spam span:nth-last-child(2) {
+        transform: rotate(0deg) scale(0.2, 0.2);
+        opacity: 0;
+    }
+    .chec:checked ~ .contenedor_spam span:nth-last-child(3) {
+        transform: rotate(45deg) translate(0px, -1px);
+    }
+    .chec:checked ~ nav{
+        background-color: aqua;
+    }
+}
